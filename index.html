@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Snake – Mobile + Python</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="card">
+    <div class="board">
+      <canvas id="game" width="480" height="480" aria-label="Snake game board"></canvas>
+
+      <!-- On-screen mobile D-pad -->
+      <div class="touch-controls" aria-hidden="false">
+        <div class="pad">
+          <button class="btn-up" id="btn-up" aria-label="Up">↑</button>
+          <button class="btn-left" id="btn-left" aria-label="Left">←</button>
+          <button class="btn-center primary" id="btn-center" aria-label="Pause or Start">⏯</button>
+          <button class="btn-right" id="btn-right" aria-label="Right">→</button>
+          <button class="btn-down" id="btn-down" aria-label="Down">↓</button>
+        </div>
+      </div>
+
+      <div class="footer">Use Arrow Keys / WASD. Mobile: swipe or on‑screen pad. Tap board to pause/resume.</div>
+    </div>
+    <aside class="panel side">
+      <h1>Snake <span class="badge">Mobile + Python</span></h1>
+      <div class="stats">
+        <div class="kpi"><label>Score</label><div id="score">0</div></div>
+        <div class="kpi"><label>High Score</label><div id="high">0</div></div>
+        <div class="kpi"><label>Time</label><div id="time">00:00</div></div>
+        <div class="kpi"><label>Length</label><div id="length">3</div></div>
+      </div>
+
+      <div class="controls">
+        <button id="start" class="primary">Start</button>
+        <button id="pause">Pause</button>
+        <button id="reset">Reset</button>
+        <button id="slower">− Speed</button>
+        <button id="faster">+ Speed</button>
+      </div>
+      <div class="controls">
+        <button id="py-load">Load Python</button>
+        <label class="toggle"><input type="checkbox" id="py-toggle"> Python Autopilot</label>
+      </div>
+
+      <div class="hint">
+        <strong>How to play</strong><br />
+        Eat food to grow. Avoid walls and yourself. Game speeds up as you score.
+      </div>
+      <div class="keys">
+        <div class="key">↑</div><div class="key">↓</div><div class="key">←</div><div class="key">→</div>
+        <div class="key">W</div><div class="key">S</div><div class="key">A</div><div class="key">D</div>
+      </div>
+      <div class="hint">Tip: press <code>Space</code> to pause/resume.</div>
+    </aside>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
